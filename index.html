@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish Generator</title>
+    <link rel="stylesheet" href="css/generator_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create a Custom Birthday Wish Website For Your Loved Ones✨</h1>
+
+        <div class="form-section">
+            <label for="recipientName">Recipient's Name:</label>
+            <input type="text" id="recipientName" value="Name">
+        </div>
+        <div class="form-section">
+            <label for="greetingText">Short Greeting (e.g., "Just wanted to say hi!"):</label>
+            <input type="text" id="greetingText" value="Just wanted to say hi!">
+        </div>
+        <div class="form-section">
+            <label for="birthdayMessage">Main Birthday Message:</label>
+            <textarea id="birthdayMessage" rows="5">Happy Birthday, {{RECIPIENT_NAME}}! May bright colors paint your life...</textarea>
+        </div>
+        <div class="form-section">
+            <label for="wishText">Final Wish (e.g., "May all your wishes come true!"):</label>
+            <input type="text" id="wishText" value="May all your wishes come true! ✨">
+        </div>
+        <div class="form-section">
+            <label for="profilePhoto">Recipient's Photo (optional):</label>
+            <input type="file" id="profilePhoto" accept="image/*">
+            <img id="photoPreview" src="#" alt="Photo Preview" style="max-width: 100px; display: none; margin-top: 10px;">
+        </div>
+        <div class="form-section">
+            <label for="songChoice">Song Choice:</label>
+            <select id="songChoice">
+                <option value="default">Default Birthday Song</option>
+                <option value="upload">Upload MP3</option>
+                <!-- Consider adding YouTube option directly here if it's a primary choice -->
+            </select>
+        </div>
+        <div id="youtubeLinkInput" class="form-section" style="display:none;">
+            <label for="youtubeUrl">YouTube Video URL:</label>
+            <input type="text" id="youtubeUrl" placeholder="e.g., https://www.youtube.com/watch?v=XYZ">
+        </div>
+        <div id="mp3UploadInput" class="form-section" style="display:none;">
+            <label for="mp3File">Upload MP3:</label>
+            <input type="file" id="mp3File" accept="audio/mpeg">
+        </div>
+
+        <button id="generateBtn">Generate & Download ZIP</button>
+
+        <div class="instructions-section" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #FFCCBC;">
+            <h2>Next Steps:</h2>
+            <ul>
+                <li>After generating the ZIP file, you can easily deploy it manually on <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a> to share the link and surprise them!</li>
+                <li>Here's a helpful YouTube video showing how to deploy a static site (like the one you'll generate) to Netlify: <a href="https://www.youtube.com/watch?v=9srnyNC1e_o" target="_blank" rel="noopener noreferrer">How to Deploy on Netlify</a>.</li>
+            </ul>
+        </div>
+
+        <div class="footer-section" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; font-size: 0.9em; color: #555;">
+            <p>
+              Crafted by <a href="https://github.com/abdulrehmanra0" target="_blank" rel="noopener noreferrer">abdulrehmanra0 on GitHub</a> |
+                <a href="https://www.linkedin.com/in/abdulrehmanra0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/jszip.min.js"></script>
+    <script src="js/FileSaver.min.js"></script>
+    <script src="js/generator_script.js"></script>
+</body>
+</html>

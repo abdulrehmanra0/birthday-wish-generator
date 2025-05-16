@@ -1,0 +1,134 @@
+/* Import a friendly Google Font (add this to the top of your CSS or in the <head> of HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fff5e6; /* A very light, warm peach/cream background */
+    color: #5D4037; /* A warm, dark brown for text */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top if content is long */
+    min-height: 100vh;
+    line-height: 1.6; /* Kept from original for good readability */
+}
+
+.container {
+    background-color: #ffffff; /* White container for contrast */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #FF7043; /* A warm coral color for the heading */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.form-section {
+    margin-bottom: 25px; /* Increased spacing between sections */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* Slightly more space below label */
+    font-weight: bold;
+    color: #795548; /* A slightly lighter warm brown for labels */
+}
+
+input[type="text"],
+input[type="file"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px; /* Increased padding */
+    margin-bottom: 5px;
+    border: 1px solid #FFCCBC; /* Light peach border */
+    border-radius: 8px; /* More rounded corners */
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #5D4037;
+    background-color: #FFFBF7; /* Very light cream for input background */
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #FF7043; /* Coral focus color */
+    box-shadow: 0 0 0 2px rgba(255, 112, 67, 0.2);
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resize only */
+    min-height: 100px; /* Slightly taller default */
+}
+
+input[type="file"] {
+    padding: 8px; /* Adjust padding for file inputs as they can look different */
+}
+
+/* Style the file input button a bit more (browser dependent) */
+input[type="file"]::file-selector-button {
+    background-color: #FFAB91; /* Lighter coral */
+    color: #5D4037;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+input[type="file"]::file-selector-button:hover {
+    background-color: #FF8A65; /* Darker coral on hover */
+}
+
+#photoPreview {
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 2px dashed #FFCCBC; /* Dashed border for placeholder feel */
+    padding: 5px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+button {
+    background-color: #FF7043; /* Coral button */
+    color: white;
+    padding: 15px 25px; /* More generous padding */
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    font-size: 1.1em; /* Slightly larger font */
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #F4511E; /* Darker coral on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+/* Styling for conditionally shown sections */
+#youtubeLinkInput,
+#mp3UploadInput {
+    background-color: #FFFBF7; /* Light cream background for these sections */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px; /* Ensure spacing when they appear */
+    border: 1px solid #FFE0B2; /* Soft yellow-orange border */
+}
